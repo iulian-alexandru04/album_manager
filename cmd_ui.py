@@ -8,14 +8,14 @@ def add_artist():
     name = input()
     print("artist's country: ", end='')
     country = input()
-    sored_artists.append(Artist(name, country))
+    sorted_artists.append(Artist(name, country))
 
 
 def show_artist():
     print('-----------Show-Artist----------')
     print("artist's name: ", end='')
     name = input()
-    for artist in sored_artists:
+    for artist in sorted_artists:
         if artist.name == name:
             print(artist)
             return
@@ -37,7 +37,7 @@ def add_album_to_artist():
     for _ in range(no_tracks):
         print('song title: ', end='')
         album.add(Song(input()))
-    for artist in sored_artists:
+    for artist in sorted_artists:
         if artist.name == artist_name:
             artist.add_album(album);
 
@@ -48,7 +48,7 @@ def add_song_to_album():
     artist_name = input()
     print("album's title: ", end='')
     title = input()
-    for artist in sored_artists:
+    for artist in sorted_artists:
         if artist.name == artist_name:
             for album in artist.get_albums():
                 if album.title == title:
@@ -57,11 +57,11 @@ def add_song_to_album():
 
 
 def sort_disks_for_all_artists():
-    for artist in sored_artists:
+    for artist in sorted_artists:
         artist.sort_albums_by_date()
 
 
-sored_artists = []
+sorted_artists = []
 def main():
     Option = namedtuple('Option', 'handler, description')
     options = [Option(add_artist, 'Add artist'),
