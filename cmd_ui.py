@@ -1,5 +1,7 @@
 from collections import namedtuple
-from main import Song, Album, Artist
+from song import Song
+from album import Album
+from artist import Artist
 
 
 def add_artist():
