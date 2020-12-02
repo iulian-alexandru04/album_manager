@@ -1,4 +1,5 @@
 import re
+from album import Album
 
 
 class Artist():

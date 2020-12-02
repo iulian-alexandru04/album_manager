@@ -1,4 +1,5 @@
 import re
+from song import Song
 
 
 class Album:

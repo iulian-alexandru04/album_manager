@@ -1,5 +1,7 @@
 import pytest
-from main import *
+from album import Album
+from artist import Artist
+from song import Song
 
 
 class TestSong:
